@@ -54,7 +54,9 @@ def get_movie_titles():
     conn.close()
     return jsonify(movies)
 
-@app.route('/get-movie-data/<title>')
+@app.route('/get-movie-data/<title>') 
+def index():
+    return render_template('new.html')
 def get_movie_data(title):
     conn = sqlite3.connect('movies.db')
     cursor = conn.cursor()
@@ -64,4 +66,4 @@ def get_movie_data(title):
     return jsonify(movie_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=1234)

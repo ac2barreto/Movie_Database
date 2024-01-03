@@ -17,3 +17,4 @@ function updateCharts(title) {
         // Use data to render Highcharts (for each type of chart)
     });
 }
+
