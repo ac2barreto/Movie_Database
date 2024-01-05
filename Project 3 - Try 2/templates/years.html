@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Release Years</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <style>
+        /* Style for the home button */
+        .home-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #1a94d1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='/'">Home</button>
+    <div id="releaseYearContainer" style="width: 100%; height: 400px; margin: 0 auto"></div>
+    <script>
+        function loadChart() {
+            fetch('/api/get-release-year')
+            .then(response => response.json())
+            .then(data => {
+                // Process the data
+                let years = data.map(item => item[1]);
+                let counts = data.map(item => item[0]);
+
+                // Render the chart using Highcharts
+                Highcharts.chart('releaseYearContainer', {
+                    chart: {
+                        type: 'line'
+                    },
+                    title: {
+                        text: 'Movie Release Years'
+                    },
+                    xAxis: {
+                        categories: years,
+                        title: {
+                            text: 'Release Year'
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Number of Movies'
+                        }
+                    },
+                    series: [{
+                        name: 'Movies',
+                        data: counts
+                    }]
+                });
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+        }
+
+        // Check if Highcharts is loaded
+        if (typeof Highcharts !== 'undefined') {
+            loadChart();
+        } else {
+            // If not, set a callback to load the chart when Highcharts is ready
+            document.addEventListener('readystatechange', event => {
+                if (event.target.readyState === 'complete') {
+                    loadChart();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- ---------- Version to link directly to a .js file ----------  -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Release Years</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <style>
+        /* Style for the home button */
+        .home-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='/'">Home</button>
+    <div id="releaseYearContainer" style="width: 100%; height: 400px; margin: 0 auto"></div>
+    <script src="/static/project.js"></script>
+</body>
+</html> -->
+
+

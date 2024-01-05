@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Genre Distribution</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+    <button id="homeButton">Home</button> <!-- Home Button Added Here -->
+    <div id="genreContainer" style="width: 100%; height: 900px; margin: 0 auto"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Event listener for the Home button
+            document.getElementById('homeButton').addEventListener('click', function() {
+                window.location.href = '/'; // Replace '/' with your home page URL if different
+            });
+
+            fetch('/api/get-movie-genres')
+            .then(response => response.json())
+            .then(data => {
+                Highcharts.chart('genreContainer', {
+                    chart: {
+                        type: 'pie'
+                    },
+                    title: {
+                        text: 'Movie Genre Distribution'
+                    },
+                    series: [{
+                        name: 'Genres',
+                        colorByPoint: true,
+                        data: data.map(item => {
+                            return {
+                                name: item[0], // genre name
+                                y: parseInt(item[1])  // genre count
+                            };
+                        })
+                    }]
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top 1000 Movies</title>
+    <style>
+        /* Existing styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Style for the home button */
+        .home-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #1a94d1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top 1,000 Movies</h1>
+
+    <!-- Home button -->
+    <a href="/" class="home-button">Home</a>
+
+    <table id="moviesTable">
+        <tr>
+            <th>Title</th>
+            <th>Director</th>
+        </tr>
+        <!-- Movie data will be inserted here -->
+    </table>
+
+    <script>
+        // Existing JavaScript code for fetching and displaying movies
+        fetch('/api/get-top-movies')
+        .then(response => response.json())
+        .then(data => {
+            const table = document.getElementById('moviesTable');
+            data.forEach(movie => {
+                const row = table.insertRow();
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+                cell1.innerHTML = movie[0];
+                cell2.innerHTML = movie[1];
+            });
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
