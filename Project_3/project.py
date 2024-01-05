@@ -5,7 +5,7 @@ from flask import Flask, jsonify, render_template
 import sqlite3
 
 
-filename = '../Project 3 - Try 1/imdb_clean.csv'  
+filename = '../Project_3/imdb_clean.csv'  
 
 data = pd.read_csv(filename)
 
@@ -83,7 +83,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return render_template('index.html')
 
 # Route for top 100 movies table _____________
 
@@ -95,7 +95,7 @@ def top_movies():
 def get_top_movies():
     conn = sqlite3.connect('movies.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT title, director FROM movies_summary;")
+    cursor.execute("SELECT DISTINCT title, director FROM movies_summary;")
     movies = cursor.fetchall()
     conn.close()
     return jsonify(movies)
@@ -129,22 +129,6 @@ def get_movie_genres():
     movies2 = cursor.fetchall()
     conn.close()
     return jsonify(movies2)
-
-
-# Route for run time average_______________
-
-@app.route('/get-avg-runtime')
-def avg_runtime():
-    return render_template('runtime.html')
-
-@app.route('/api/get-avg-runtime')
-def get_avg_runtime():
-    conn = sqlite3.connect('movies.db')
-    cursor = conn.cursor()
-    cursor.execute("SELECT AVG(runtime) AS average_runtime FROM movies_summary;")
-    movies3 = cursor.fetchall()
-    conn.close()
-    return jsonify(movies3)
 
 
 if __name__ == '__main__':

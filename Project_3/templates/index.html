@@ -65,13 +65,14 @@
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
-  <img src="../images/image.jpeg" alt="boat" style="width:100%;min-height:350px;max-height:300px;">
+  <img src="{{url_for('static', filename='image.jpeg')}}" alt="boat" style="width:100%;min-height:350px;max-height:300px;">
   <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
     <!-- <button onclick="document.getElementById('id01').style.display='block'" 
         class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">Lightning McQueen Movie Database</button> -->
         <button class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">Lightning McQueen Movie Database</button>
   
-  
+        <!-- src="{{url_for('static', filename='image.jpeg')}}"  -->
+        <!-- src="../images/image.jpeg" -->
     </div>
 </div>
 
@@ -101,31 +102,31 @@
 <div class="w3-row"><br>
 
 <div class="w3-quarter">
-  <img src="../images/Car1.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="{{url_for('static', filename='Car1.jpeg')}}" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Andrea Barreto</h3>
   <p>Data Analyst</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="../images/Car2.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="{{url_for('static', filename='Car2.jpeg')}}" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Arezoo Houshi</h3>
   <p>Data Analyst</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="../images/Car3.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="{{url_for('static', filename='Car3.jpeg')}}" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Francisco Diaz</h3>
   <p>Data Analyst</p>
 </div>
 
 <div class="w3-quarter">
-  <img src="../images/Car4.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="{{url_for('static', filename='Car4.jpeg')}}" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Alana Castellano</h3>
   <p>Front End Programmer</p>
 </div>
 
 <div class="w3-container w3-padding-64 w3-center">
-    <img src="../images/Car5.jpeg" alt="Boss" style="width:15%" class="w3-circle w3-hover-opacity">
+    <img src="{{url_for('static', filename='Car5.jpeg')}}" alt="Boss" style="width:15%" class="w3-circle w3-hover-opacity">
     <h3>Juan Diaz</h3>
     <p>Data Analyst</p>
   </div>
@@ -146,8 +147,8 @@
 
 <div class="w3-quarter">
 <div class="w3-card w3-white">
-  <a href="topmovies.html"  target="_blank">
-  <img src="../images/movie1.jpeg" alt="Movie Projector" style="width:100%">
+  <a href="/get-top-movies"  target="_blank">
+  <img src="{{url_for('static', filename='movie1.jpeg')}}" alt="Movie Projector" style="width:100%">
   </a>
   <div class="w3-container">
   
@@ -161,21 +162,20 @@
 
 <div class="w3-quarter">
 <div class="w3-card w3-white">
-  <a href="genre.html">
-  <img src="../images/movie2.jpeg" alt="Theater" style="width:100%">
+  <a href="/get-movie-genres">
+  <img src="{{url_for('static', filename='movie2.jpeg')}}" alt="Theater" style="width:100%">
   </a>
   <div class="w3-container">
   <h3>Genre Chart</h3>
   <h5>Visualize how the Top 1000 movie's genres compare</h5>
-
   </div>
   </div>
 </div>
 
 <div class="w3-quarter">
 <div class="w3-card w3-white">
-  <a href="years.html">
-  <img src="../images/movie3.jpeg" alt="Box Office" style="width:100%">
+  <a href="/get-release-year">
+  <img src="{{url_for('static', filename='movie3.jpeg')}}" alt="Box Office" style="width:100%">
   </a>
   <div class="w3-container">
   <h3>Year Made</h3>
@@ -184,7 +184,6 @@
   </div>
   </div>
 </div>
-
 </div>
 
 <!-- Container -->
@@ -303,11 +302,11 @@
   <h4>Follow Us</h4>
 
  
-  <a class="w3-button w3-large w3-teal" href="https://github.com/fraguti14" title="Francisco"> <img src="../images/github.png" style="width:50%;"></i><br>Francisco</a>
-  <a class="w3-button w3-large w3-teal" href="https://github.com/Arezootvk" title="Arezoo"> <img src="../images/github.png" style="width:50%;"></i><br>Arezoo</a>
-  <a class="w3-button w3-large w3-teal" href="https://github.com/ac2barreto" title="Andrea"> <img src="../images/github.png" style="width:50%;"></i><br>Andrea</a>
-  <a class="w3-button w3-large w3-teal" href="https://github.com/juandg93" title="Juan"> <img src="../images/github.png" style="width:50%;"></i><br>Juan</a>
-  <a class="w3-button w3-large w3-teal" href="https://github.com/alanabianca" title="Alana"> <img src="../images/github.png" style="width:50%;"></i><br>Alana</a>
+  <a class="w3-button w3-large w3-teal" href="https://github.com/fraguti14" title="Francisco"> <img src="{{url_for('static', filename='github.png')}}" style="width:50%;"></i><br>Francisco</a>
+  <a class="w3-button w3-large w3-teal" href="https://github.com/Arezootvk" title="Arezoo"> <img src="{{url_for('static', filename='github.png')}}" style="width:50%;"></i><br>Arezoo</a>
+  <a class="w3-button w3-large w3-teal" href="https://github.com/ac2barreto" title="Andrea"> <img src="{{url_for('static', filename='github.png')}}" style="width:50%;"></i><br>Andrea</a>
+  <a class="w3-button w3-large w3-teal" href="https://github.com/juandg93" title="Juan"> <img src="{{url_for('static', filename='github.png')}}" style="width:50%;"></i><br>Juan</a>
+  <a class="w3-button w3-large w3-teal" href="https://github.com/alanabianca" title="Alana"> <img src="{{url_for('static', filename='github.png')}}" style="width:50%;"></i><br>Alana</a>
   
   
   
