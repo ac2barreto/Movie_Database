@@ -44,7 +44,7 @@ From the project_3 folder, run the python file project.py. While python file is 
 ### HTML Templates:
 - w3.css: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_website&stacked=h
 ### Code Support:
--UT Austin The Data Analytics and Visualization Bootcamp: https://git.bootcampcontent.com/University-of-Texas-at-Austin/UTA-VIRT-DATA-PT-08-2023-U-LOLC/-/tree/main
+- UT Austin The Data Analytics and Visualization Bootcamp: https://git.bootcampcontent.com/University-of-Texas-at-Austin/UTA-VIRT-DATA-PT-08-2023-U-LOLC/-/tree/main
 ### Instructional Team Support:
 - Javier Vargas
 - Ariel Gamino
