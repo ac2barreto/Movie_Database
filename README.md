@@ -22,7 +22,7 @@ Two routes are defined for rendering HTML templates (index.html, topmovies.html,
 - /api/get-movie-genres: Returns the count of movies grouped by genre from the movies table.
 ### Running the Application:
 The application is configured to run with debug mode enabled on port 1234.
-Overall, your project combines data processing, database management using SQLite, and web development using Flask to create a simple web application that provides information about top movies, movie counts by release year, and genre distribution.
+Overall, the project combines data processing, database management using SQLite, and web development using Flask to create a simple web application that provides information about top movies, movie counts by release year, and genre distribution.
 
 # Table of Contents:
 - [Introduction](#introduction)
