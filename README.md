@@ -46,10 +46,10 @@ From the project_3 folder, run the python file project.py. While python file is 
 ### Images:
 - Pixar images used without permission, belong to Disney, and were found at https://www.caranddriver.com/features/g15086608/cars-3-characters-names/
 - Movie images found at:
-    https://247wallst.com/media/2021/03/29/this-is-the-price-of-a-movie-ticket-in-the-past-25-years/
-    https://www.shutterstock.com/search/movie
-    https://pixabay.com/images/search/movie/
-    https://www.rd.com/list/classic-movies/
+    - https://247wallst.com/media/2021/03/29/this-is-the-price-of-a-movie-ticket-in-the-past-25-years/
+    - https://www.shutterstock.com/search/movie
+    - https://pixabay.com/images/search/movie/
+    - https://www.rd.com/list/classic-movies/
 - GitHub logo is the property of Github.com 
 ### Code Support:
 - UT Austin The Data Analytics and Visualization Bootcamp: https://git.bootcampcontent.com/University-of-Texas-at-Austin/UTA-VIRT-DATA-PT-08-2023-U-LOLC/-/tree/main
