@@ -5,7 +5,7 @@ from flask import Flask, jsonify, render_template
 import sqlite3
 
 
-filename = '../Project_3/imdb_clean.csv'  
+filename = 'Project_3/imdb_clean.csv'  
 
 data = pd.read_csv(filename)
 
