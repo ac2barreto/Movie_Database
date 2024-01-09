@@ -62,3 +62,10 @@ From the project_3 folder, run the python file project.py. While python file is 
 - Arezootvk 
 - fraguti14
 - juandg93
+
+
+- Alana: HTML full front-end development , Code Q/A, data setup pandas, data research, CSS
+- Andrea: Git organization, Code Q/A, data cleanup, Pandas data setup, SQLlite database logic, Route javascript and HTML enhancing, pandas df formatting and organization, overall code enhancing, all git
+- Juan: Javascript research, Javascript high chart library charts, code for table and charts, pd setup
+- Francisco: Flask setup and routes, JSON outputs, schemas, SQLite database and schemas, data filtering, Javascript chart setup
+- Arezoo: database and CSV data research/selection/implementation, presentation content, Code Q/A, Pandas dataframe for movies setup
